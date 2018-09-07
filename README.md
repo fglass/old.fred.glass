@@ -1,2 +1,4 @@
-# fred.glass
-https://www.fred.glass
+<div align="center">
+      <h1>www.fred.glass</h1>
+      <p>Personal website, constructed utilising the <a href="https://getbootstrap.com">Bootstrap</a> framework</p>
+</div>
