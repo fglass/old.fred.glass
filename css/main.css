@@ -1,0 +1,37 @@
+body {
+    background-color: #272b2f;
+}
+
+a {
+    text-decoration: none!important;
+    color: #e3e5e5;
+}
+
+a:link {
+    text-decoration: none!important;
+    color: #e3e5e5;
+}
+
+a:hover {
+    text-decoration: none!important;
+    color: #e3e5e5;
+}
+
+a:active {
+    text-decoration: none!important;
+    color: #e3e5e5;
+}
+
+a:visited {
+    text-decoration: none!important;
+    color: #e3e5e5;
+}
+
+.jumbotron_heading {
+    color: #a0afbc;
+}
+
+.img {
+    max-width:100%;
+    height:auto;
+}

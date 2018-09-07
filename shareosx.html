@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>fred.glass · ShareOSX</title>
+
+        <link rel="icon" type="image/png" href="res/favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css?v=1">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div id="nav-placeholder"></div>
+            <script>
+                $.get("nav.html", function(data) {
+                    $("#nav-placeholder").replaceWith(data);
+                });
+            </script>
+        </header>
+
+        <main role="main" class="pt-4">
+            <section class="jumbotron text-center bg-transparent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-secondary mt-5">
+                            <h1 class="text-light">ShareOSX</h1>
+                            <p class="pt-2">
+                                An OSX recreation of <a href="https://getsharex.com">ShareX</a>, written in Swift.<br>
+                                Supports region capturing, window selection and GIF recording.
+                            </p>
+                        </div>
+                        <div class="col-6 mx-auto pt-3">
+                            <img class="img" src="res/shareosx_logo.png"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </body>
+</html>

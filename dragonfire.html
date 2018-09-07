@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>fred.glass · Dragonfire</title>
+
+        <link rel="icon" type="image/png" href="res/favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css?v=1">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div id="nav-placeholder"></div>
+            <script>
+                $.get("nav.html", function(data) {
+                    $("#nav-placeholder").replaceWith(data);
+                });
+            </script>
+        </header>
+
+        <main role="main">
+
+            <section class="jumbotron text-center bg-transparent">
+                <div class="container" >
+                    <img class="img" src="res/dragonfire_logo.gif"/>
+                    <h1 class="jumbotron_heading pt-3">An <a href="https://oldschool.runescape.com">Old School RuneScape</a> Emulation</h1>
+                    <p class="lead text-muted pt-1">
+                        Written in Java, coupled with an extensible Kotlin plugin system,
+                        and based on the 317 revision, Dragonfire has a calculated balance between skilling, bossing
+                        and player killing - all of which are integral parts of the economy.
+                        The goal is to break the mould and achieve truly unique and tasteful
+                        custom content, whilst still having all prominent original material implemented.</p>
+                    <img class="img pt-4" src="res/dragonfire_1.png"/>
+
+                </div>
+            </section>
+
+            <div class="album py-5 bg-light" style="background:#353a3f !important">
+                <div class="container">
+                    <div class="row">
+                        <script src="js/cards.js?v=1"></script>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </body>
+</html>
