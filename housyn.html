@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131273827-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-131273827-1');
+        </script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>fred.glass · Housyn</title>
+
+        <link rel="icon" type="image/png" href="res/favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css?v=1.3">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/wavesurfer.min.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div id="nav-placeholder"></div>
+            <script>
+                $.get("nav.html", function(data) {
+                    $("#nav-placeholder").replaceWith(data);
+                });
+            </script>
+        </header>
+
+        <main role="main" class="pt-4">
+
+            <section class="jumbotron text-center bg-transparent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-secondary mt-5">
+                            <h1 class="text-light">Housyn</h1>
+                            <p class="pt-2">
+                                Algorithmic generation of novel house music using LSTM RNNs.
+                                <br><a href="literature-review.pdf"><img src="res/pdf.svg" width="17"> Literature Review and Project Specification</a>
+                            </p>
+                        </div>
+                        <div class="col-6 mx-auto">
+                            <img class="img" src="res/house.png"/>
+                        </div>
+                    </div>
+                    <div id="waveform"></div>
+                    <p class="text-secondary" id="track">
+                        Classical Music Prototype<br>Generated Track #001
+                    </p>
+                    <input type="image" src="res/previous.svg" width="40" onclick="previous()">
+                    <input type="image" id="play" src="res/play.svg" width="40" onclick="playPause(this)">
+                    <input type="image" src="res/next.svg" width="40" onclick="next()">
+                    <script>
+                        var index = 0;
+                        var tracks = 3;
+                        var wavesurfer = WaveSurfer.create({
+                            container: '#waveform',
+                            waveColor: 'white',
+                            progressColor: 'grey',
+                            barWidth: 2,
+                            barHeight: 10
+                        });
+                        wavesurfer.load('res/track0.mp3');
+
+                        function playPause(e) {
+                            wavesurfer.playPause();
+                            if (e.src.includes("res/play.svg")) {
+                                e.src = "res/pause.svg";
+                            } else {
+                                e.src = "res/play.svg";
+                            }
+                        }
+
+                        function previous() {
+                            index = mod(index, tracks, -1);
+                            load();
+                        }
+
+                        function next() {
+                            index = mod(index, tracks, 1);
+                            load();
+                        }
+
+                        function mod(n, m, delta) {
+                            return (((n + delta) % m) + m) % m;
+                        }
+
+                        function load() {
+                            wavesurfer.load('res/track' + index + '.mp3');
+                            document.getElementById("track").innerText = "Classical Music Prototype\nGenerated Track #00" + (index + 1);
+                            document.getElementById("play").src = "res/play.svg";
+                        }
+                    </script>
+                </div>
+            </section>
+
+        </main>
+
+    </body>
+</html>
