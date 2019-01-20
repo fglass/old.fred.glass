@@ -54,20 +54,20 @@
                     </div>
                     <div id="waveform"></div>
                     <p class="text-secondary" id="track">
-                        Classical Music Prototype<br>Generated Track #001
+                        Beethoven Prototype<br>Generated Track #01
                     </p>
                     <input type="image" src="res/previous.svg" width="40" onclick="previous()">
                     <input type="image" id="play" src="res/play.svg" width="40" onclick="playPause(this)">
                     <input type="image" src="res/next.svg" width="40" onclick="next()">
                     <script>
                         var index = 0;
-                        var tracks = 3;
+                        var tracks = 5;
                         var wavesurfer = WaveSurfer.create({
                             container: '#waveform',
                             waveColor: 'white',
                             progressColor: 'grey',
                             barWidth: 2,
-                            barHeight: 10
+                            barHeight: 4
                         });
                         wavesurfer.load('res/track0.mp3');
 
@@ -96,7 +96,7 @@
 
                         function load() {
                             wavesurfer.load('res/track' + index + '.mp3');
-                            document.getElementById("track").innerText = "Classical Music Prototype\nGenerated Track #00" + (index + 1);
+                            document.getElementById("track").innerText = "Beethoven Prototype\nGenerated Track #0" + (index + 1);
                             document.getElementById("play").src = "res/play.svg";
                         }
                     </script>
