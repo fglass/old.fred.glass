@@ -44,8 +44,8 @@
                         <div class="col text-secondary mt-5">
                             <h1 class="text-light">Housyn</h1>
                             <p class="pt-2">
-                                Algorithmic generation of novel house music using LSTM RNNs.
-                                <br><a href="literature-review.pdf"><img src="res/pdf.svg" width="17"> Literature Review and Project Specification</a>
+                                Algorithmic generation of novel house music.
+                                <br><a href="final-report.pdf"><img src="res/pdf.svg" width="17"> Project Report</a>
                             </p>
                         </div>
                         <div class="col-6 mx-auto">
@@ -53,23 +53,22 @@
                         </div>
                     </div>
                     <div id="waveform"></div>
-                    <p class="text-secondary" id="track">
-                        Beethoven Prototype<br>Generated Track #01
+                    <p class="text-secondary" id="name">
+                        Final Product: Multi-Instrument MIDI
                     </p>
                     <input type="image" src="res/previous.svg" width="40" onclick="previous()">
                     <input type="image" id="play" src="res/play.svg" width="40" onclick="playPause(this)">
                     <input type="image" src="res/next.svg" width="40" onclick="next()">
                     <script>
-                        var index = 0;
-                        var tracks = 5;
-                        var wavesurfer = WaveSurfer.create({
-                            container: '#waveform',
-                            waveColor: 'white',
-                            progressColor: 'grey',
+                        let index = 0;
+                        const tracks = 3;
+                        const wavesurfer = WaveSurfer.create({
+                            container: "#waveform",
+                            waveColor: "white",
+                            progressColor: "grey",
                             barWidth: 2,
-                            barHeight: 4
                         });
-                        wavesurfer.load('res/track0.mp3');
+                        wavesurfer.load("res/track0.mp3");
 
                         function playPause(e) {
                             wavesurfer.playPause();
@@ -95,8 +94,10 @@
                         }
 
                         function load() {
-                            wavesurfer.load('res/track' + index + '.mp3');
-                            document.getElementById("track").innerText = "Beethoven Prototype\nGenerated Track #0" + (index + 1);
+                            const names = ["Final Product: Multi-Instrument MIDI", "Prototype Two: Waveform Operation",
+                                           "Prototype One: Beethoven"];
+                            wavesurfer.load("res/track" + index + ".mp3");
+                            document.getElementById("name").innerText = names[index];
                             document.getElementById("play").src = "res/play.svg";
                         }
                     </script>
