@@ -27,7 +27,7 @@ var data = [
     { "src": "res/dragonfire_2.gif", "title": "Bespoke Sailing Skill" },
     { "src": "res/dragonfire_3.png", "title": "Dynamic World Map" },
     { "src": "res/dragonfire_4.gif", "title": "Enhanced Construction" },
-    { "src": "res/dragonfire_5.gif", "title": "Streamlined Dev Environment" },
+    { "src": "res/dragonfire_5.gif", "title": "Developer Environment" },
     { "src": "res/dragonfire_6.png", "title": "Exclusive Models" },
     { "src": "res/dragonfire_7.gif", "title": "Replicated Interfaces" },
 ];
