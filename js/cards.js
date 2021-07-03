@@ -1,5 +1,5 @@
 function createCard(img) {
-    var template = [
+    const template = [
         '<div class="col-md-4">',
         '<div class="card text-white bg-dark mb-4 shadow-sm">',
         '<img class="card-img-top" src=', img.src, '>',
@@ -24,11 +24,11 @@ function createCards(data) {
 }
 
 var data = [
+    { "src": "res/dragonfire-4.png", "title": "Reimagined Construction" },
+    { "src": "res/dragonfire-3.gif", "title": "New Sailing Skill" },
     { "src": "res/dragonfire-2.png", "title": "Dynamic World Map" },
-    { "src": "res/dragonfire-3.gif", "title": "Bespoke Sailing Skill" },
-    { "src": "res/dragonfire-4.png", "title": "Enhanced Construction" },
-    { "src": "res/dragonfire-5.gif", "title": "Extensible Plugins" },
-    { "src": "res/dragonfire-6.png", "title": "Exclusive Models" },
+    { "src": "res/dragonfire-5.gif", "title": "Hot Reloadable Plugins" },
+    { "src": "res/dragonfire-6.png", "title": "Bespoke Models" },
     { "src": "res/dragonfire-7.gif", "title": "Replicated Interfaces" },
 ];
 
