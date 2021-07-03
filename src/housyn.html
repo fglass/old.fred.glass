@@ -16,13 +16,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>fred.glass · Housyn</title>
 
-        <link rel="icon" type="image/png" href="res/favicon.png">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css?v=1.4">
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/wavesurfer.min.js"></script>
+        <link rel="icon" type="image/png" href="../res/favicon.png">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/main.css?v=1.5">
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/popper.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/wavesurfer.min.js"></script>
     </head>
 
     <body>
@@ -40,11 +40,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col text-secondary">
-                            <img class="img" src="res/house.png"/>
+                            <img class="img" src="../res/house.png"/>
                             <h1 class="text-light">Housyn</h1>
                             <p>
                                 Algorithmic generation of novel house music
-                                <br><a href="final-report.pdf"><img src="res/pdf.svg" width="17"> Dissertation</a>
+                                <br><a href="../res/final-report.pdf"><img src="../res/pdf.svg" width="17"> Dissertation</a>
                             </p>
                         </div>
                     </div>
@@ -52,9 +52,9 @@
                     <p class="text-secondary" id="name">
                         Final Product: Multi-Instrument MIDI
                     </p>
-                    <input type="image" src="res/previous.svg" width="40" onclick="previous()">
-                    <input type="image" id="play" src="res/play.svg" width="40" onclick="playPause(this)">
-                    <input type="image" src="res/next.svg" width="40" onclick="next()">
+                    <input type="image" src="../res/previous.svg" width="40" onclick="previous()">
+                    <input type="image" id="play" src="../res/play.svg" width="40" onclick="playPause(this)">
+                    <input type="image" src="../res/next.svg" width="40" onclick="next()">
                     <script>
                         let index = 0;
                         const tracks = 3;
@@ -64,14 +64,14 @@
                             progressColor: "grey",
                             barWidth: 2,
                         });
-                        wavesurfer.load("res/track0.mp3");
+                        wavesurfer.load("../res/track0.mp3");
 
                         function playPause(e) {
                             wavesurfer.playPause();
-                            if (e.src.includes("res/play.svg")) {
-                                e.src = "res/pause.svg";
+                            if (e.src.includes("play")) {
+                                e.src = "../res/pause.svg";
                             } else {
-                                e.src = "res/play.svg";
+                                e.src = "../res/play.svg";
                             }
                         }
 
@@ -90,11 +90,14 @@
                         }
 
                         function load() {
-                            const names = ["Final Product: Multi-Instrument MIDI", "Prototype Two: Waveform Operation",
-                                           "Prototype One: Beethoven"];
-                            wavesurfer.load("res/track" + index + ".mp3");
+                            const names = [
+                                "Final Product: Multi-Instrument MIDI",
+                                "Prototype Two: Waveform Operation",
+                                "Prototype One: Beethoven"
+                            ];
+                            wavesurfer.load("../res/track" + index + ".mp3");
                             document.getElementById("name").innerText = names[index];
-                            document.getElementById("play").src = "res/play.svg";
+                            document.getElementById("play").src = "../res/play.svg";
                         }
                     </script>
                 </div>

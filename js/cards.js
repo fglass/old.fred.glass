@@ -24,12 +24,12 @@ function createCards(data) {
 }
 
 var data = [
-    { "src": "res/dragonfire-4.png", "title": "Reimagined Construction" },
-    { "src": "res/dragonfire-3.gif", "title": "New Sailing Skill" },
-    { "src": "res/dragonfire-2.png", "title": "Dynamic World Map" },
-    { "src": "res/dragonfire-5.gif", "title": "Hot Reloadable Plugins" },
-    { "src": "res/dragonfire-6.png", "title": "Bespoke Models" },
-    { "src": "res/dragonfire-7.gif", "title": "Replicated Interfaces" },
+    { "src": "../res/dragonfire-4.png", "title": "Reimagined Construction" },
+    { "src": "../res/dragonfire-3.gif", "title": "New Sailing Skill" },
+    { "src": "../res/dragonfire-2.png", "title": "Dynamic World Map" },
+    { "src": "../res/dragonfire-5.gif", "title": "Hot Reloadable Plugins" },
+    { "src": "../res/dragonfire-6.png", "title": "Bespoke Models" },
+    { "src": "../res/dragonfire-7.gif", "title": "Replicated Interfaces" },
 ];
 
 createCards(data);

@@ -1,2 +1,2 @@
 ## fred.glass
-Personal website constructed using the <a href="https://getbootstrap.com">Bootstrap framework</a>
+Personal website built using <a href="https://getbootstrap.com">Bootstrap</a>

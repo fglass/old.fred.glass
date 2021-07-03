@@ -1,6 +1,6 @@
 /**
- * @author Frederick Glass
  * @author Robert Bue
+ * @author Fred Glass
  */
 
 var head = function() {
@@ -34,7 +34,7 @@ var head = function() {
     });
 
     var loader = new THREE.OBJLoader(manager);
-    loader.load("res/head.obj", function (object) {
+    loader.load("../res/head.obj", function (object) {
 
         object.traverse(function (child) {
             if (child instanceof THREE.Mesh) {
