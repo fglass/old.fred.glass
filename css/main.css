@@ -39,3 +39,17 @@ a:visited {
 *:focus {
     outline: 0 !important;
 }
+
+@media only screen and (max-width: 992px) {
+    .navbar-right {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        padding-right: 1rem;
+    }
+
+    .dropdown-menu, .dropdown-item {
+        background-color: #282b2e !important;
+    }
+}
